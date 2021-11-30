@@ -4,7 +4,14 @@
 namespace App\Controller\Admin;
 
 
-class AdminBaseController
-{
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+class AdminBaseController extends  AbstractController
+{
+    public function renderDefault()
+    {
+        return [
+            'title' => 'Значение по умолчанию для Админки'
+        ];
+    }
 }
